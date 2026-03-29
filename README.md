@@ -15,26 +15,29 @@ This repo is an exercise in applied AI engineering — specifically in designing
 
 ## How it works
 
-1. **Fork and initialize**
+**Pick a starting point:**
 
-   ```bash
-   nvm use && sh init.sh
-   ```
+- **From scratch** — fork this repo and run `sh init.sh` to bootstrap. This lets you optimize the initial PRD and infrastructure.
+- **From a fork** — browse [existing forks](https://github.com/search?q=topic%3Aralph-wiggum&type=repositories) and start from one that already has an initialized project. This saves tokens by iterating from a checkpoint instead of regenerating from zero.
 
-2. **Write a PRD** (`PRD.md`) with checkbox tasks:
+Any repo — this one or a fork — can serve as the starting point for the next iteration.
+
+**Run the Ralph Loop:**
+
+1. **Write a PRD** (`PRD.md`) with checkbox tasks:
 
    ```markdown
    - [ ] Create a responsive landing page `[test: npx playwright test tests/landing.spec.ts]`
    - [ ] Add dark mode toggle `[test: npx playwright test tests/theme.spec.ts]`
    ```
 
-3. **Generate test backpressure** — failing tests that define "done", which are human verified and optimized post-creation:
+2. **Generate test backpressure** — failing tests that define "done", which are human verified and optimized post-creation:
 
    ```bash
    npm run backpressure
    ```
 
-4. **Run the loop** — the agent implements until all tests pass:
+3. **Run the loop** — the agent implements until all tests pass:
 
    ```bash
    npm run ralph
