@@ -8,7 +8,30 @@
   </head>
   <body>
     <div class="counter-container">
+      <button type="button" data-testid="decrement-button" class="counter-button">-</button>
       <div data-testid="counter-value" class="counter-value">0</div>
+      <button type="button" data-testid="increment-button" class="counter-button">+</button>
     </div>
+    <script>
+      let counterValue = 0;
+
+      const counterDisplay = document.querySelector("[data-testid='counter-value']");
+      const incrementButton = document.querySelector("[data-testid='increment-button']");
+      const decrementButton = document.querySelector("[data-testid='decrement-button']");
+
+      function updateDisplay() {
+        counterDisplay.textContent = counterValue;
+      }
+
+      incrementButton.addEventListener("click", () => {
+        counterValue++;
+        updateDisplay();
+      });
+
+      decrementButton.addEventListener("click", () => {
+        counterValue--;
+        updateDisplay();
+      });
+    </script>
   </body>
 </html>

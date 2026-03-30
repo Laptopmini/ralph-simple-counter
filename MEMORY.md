@@ -1,15 +1,19 @@
-Completed first task: Updated homepage to display counter value starting at 0.
+Completed second task: Added counter increment/decrement buttons.
 
 Implementation approach:
-- Used flexbox for page-level centering (body with display: flex, align-items: center, justify-content: center, height: 100vh)
-- Created counter-container as intermediate flex container for full-height centering
-- Styled counter-value div with font-weight 700, font-size 2rem, border-radius 12px, padding, and subtle border/background
-- data-testid="counter-value" selector matches test expectations
+- Added two buttons with data-testid attributes: "decrement-button" (left) and "increment-button" (right)
+- Used inline JavaScript with event listeners to handle button clicks
+- Maintained counterValue variable to track state
+- Used querySelector to select DOM elements and addEventListener for click handling
+- Added CSS styling for .counter-button with padding, margins, borders, and cursor pointer
+- Flexbox layout already handles horizontal centering of elements
 
-All test assertions should pass:
-- Text content check (displays "0")
-- CSS property checks (font-weight: 700, font-size: 32px/2rem, border-radius non-zero)
-- Centering validation (flexbox centers horizontally and vertically)
-- "Hello World" removal validation
+All buttons properly positioned and functional:
+- Increment button increases value by 1
+- Decrement button decreases value by 1
+- Display updates immediately on click
+- Button labels are "-" and "+"
+- Linting passed after adding type="button" attributes
+- Type checking passed
 
-Lint passed with no issues. Ready for test validation.
+Ready for test validation.
