@@ -8,9 +8,12 @@
   </head>
   <body>
     <div class="counter-container">
-      <button type="button" data-testid="decrement-button" class="counter-button">-</button>
-      <div data-testid="counter-value" class="counter-value">0</div>
-      <button type="button" data-testid="increment-button" class="counter-button">+</button>
+      <div class="counter-row">
+        <button type="button" data-testid="decrement-button" class="counter-button">-</button>
+        <div data-testid="counter-value" class="counter-value">0</div>
+        <button type="button" data-testid="increment-button" class="counter-button">+</button>
+      </div>
+      <button type="button" data-testid="reset-button" class="reset-button">Reset</button>
     </div>
     <script>
       let counterValue = 0;
@@ -18,6 +21,7 @@
       const counterDisplay = document.querySelector("[data-testid='counter-value']");
       const incrementButton = document.querySelector("[data-testid='increment-button']");
       const decrementButton = document.querySelector("[data-testid='decrement-button']");
+      const resetButton = document.querySelector("[data-testid='reset-button']");
 
       function updateDisplay() {
         counterDisplay.textContent = counterValue;
@@ -30,6 +34,11 @@
 
       decrementButton.addEventListener("click", () => {
         counterValue--;
+        updateDisplay();
+      });
+
+      resetButton.addEventListener("click", () => {
+        counterValue = 0;
         updateDisplay();
       });
     </script>
