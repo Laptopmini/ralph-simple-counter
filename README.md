@@ -1,6 +1,6 @@
-# ralph-html
+# ralph-simple-counter
 
-A fork of [ralph-node](https://github.com/Laptopmini/ralph-node) with a simple boilerplate to serve a static HTML based application.
+A fork of [ralph-node](https://github.com/Laptopmini/ralph-node) implementing a simple counter application using static HTML and CSS.
 
 Fork this repo and drop in a new `PRD.md` to start building something with the loop already bootstrapped.
 
@@ -11,7 +11,7 @@ For full documentation on how the Ralph Loop works and how to use these repos, s
 All `ralph-node` repos begin from the same genesis, and branch off a specific upstream in its tree:
 
 - **Genesis:** https://github.com/Laptopmini/ralph-node
-- **Upstream:** https://github.com/Laptopmini/ralph-node-base
+- **Upstream:** https://github.com/Laptopmini/ralph-html
 
 ## Changelog
 
@@ -21,6 +21,10 @@ All `ralph-node` repos begin from the same genesis, and branch off a specific up
 - **Root test script** — `npm test` wired to run unit then E2E tests sequentially
 - **Static HTML website** — Configured to serve a static HTML based application
 - **Playwright webServer** — Updated Playwright configuration with webServer block for proper test execution
+- **Counter value display** — Centered counter display with data-testid and styled container
+- **Counter buttons** — Decrement and increment buttons with event listeners to update counter value
+- **Reset button** — Reset button to return counter to 0, restructured HTML for proper layout
+- **Dynamic color styling** — Color palette applied to counter value based on sign (red for negative, green for positive, black for zero)
 
 ## License
 
