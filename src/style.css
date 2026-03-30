@@ -3,4 +3,25 @@ body {
   margin: 0;
   padding: 20px;
   font-family: system-ui, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.counter-value {
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 12px;
+  padding: 40px 60px;
+  border: 2px solid #e0e0e0;
+  background-color: #f9f9f9;
 }
