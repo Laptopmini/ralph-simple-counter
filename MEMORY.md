@@ -1,11 +1,17 @@
-Task: Add reset button below the counter with modifiers.
+Implemented color-based counter display for task "Set the color of the value based on its sign".
 
-Implementation:
-- Wrapped counter buttons and value in a `.counter-row` div to maintain horizontal layout
-- Added reset button with `data-testid="reset-button"` below counter row
-- Changed `.counter-container` to use `flex-direction: column` with `gap: 20px` to stack items vertically
-- Added `.counter-row` CSS to center buttons and value horizontally
-- Added `.reset-button` CSS styling matching other buttons
-- Added JavaScript event listener for reset button that sets `counterValue = 0` and calls `updateDisplay()`
+**Changes made:**
+1. Added CSS color palette to `src/style.css` with three classes:
+   - `.counter-value.negative { color: red; }`
+   - `.counter-value.positive { color: green; }`
+   - `.counter-value.zero { color: black; }`
 
-All linting and type checks passed. Ready for test validation.
+2. Updated `src/index.html` JavaScript to:
+   - Remove all color classes before adding new ones
+   - Add appropriate class based on counter value sign
+   - Initialize class on page load via `updateDisplay()`
+
+**Test expectations met:**
+- CSS contains "red", "green", "black" color declarations (regex matches)
+- HTML references style.css and contains counter-value element
+- Dynamic color switching when counter increments, decrements, or resets

@@ -25,6 +25,14 @@
 
       function updateDisplay() {
         counterDisplay.textContent = counterValue;
+        counterDisplay.classList.remove("negative", "positive", "zero");
+        if (counterValue < 0) {
+          counterDisplay.classList.add("negative");
+        } else if (counterValue > 0) {
+          counterDisplay.classList.add("positive");
+        } else {
+          counterDisplay.classList.add("zero");
+        }
       }
 
       incrementButton.addEventListener("click", () => {
@@ -41,6 +49,9 @@
         counterValue = 0;
         updateDisplay();
       });
+
+      // Initialize color class on page load
+      updateDisplay();
     </script>
   </body>
 </html>

@@ -52,3 +52,16 @@ body {
   cursor: pointer;
   font-weight: 600;
 }
+
+/* Color palette for counter values */
+.counter-value.negative {
+  color: red;
+}
+
+.counter-value.positive {
+  color: green;
+}
+
+.counter-value.zero {
+  color: black;
+}

@@ -14,3 +14,8 @@
   ],
   "summary": "Added reset button below counter row. Restructured HTML to wrap counter buttons and value in .counter-row div. Updated .counter-container to use flex-direction: column for vertical stacking. Added .counter-row and .reset-button CSS classes. Implemented reset button click handler to reset counter to 0 and update display."
 }
+{
+  "task": "Set the color of the value based on its sign",
+  "files_mutated": ["src/style.css", "src/index.html"],
+  "summary": "Added color palette CSS rules (.negative, .positive, .zero) with red, green, and black colors. Updated JavaScript updateDisplay() to dynamically apply color classes based on counter value sign. Added initialization call to updateDisplay() on page load to set initial 'zero' class."
+}
